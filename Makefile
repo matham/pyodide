@@ -37,6 +37,14 @@ LDFLAGS=\
 	-s SWAPPABLE_ASM_MODULE=1 \
 	-s USE_FREETYPE=1 \
 	-s USE_LIBPNG=1 \
+	-s USE_ZLIB=1 \
+    -s USE_SDL=2 \
+    -s USE_SDL_IMAGE=2 \
+    -s SDL2_IMAGE_FORMATS='["bmp","png","xpm"]' \
+    -s USE_SDL_TTF=2 \
+    -s USE_SDL_MIXER=2 \
+    -s USE_HARFBUZZ=1 \
+    -s USE_WEBGL2=1 \
 	-std=c++14 \
   -L$(wildcard $(CPYTHONROOT)/build/sqlite*/.libs) -lsqlite3 \
   -lstdc++ \

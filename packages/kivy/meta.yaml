@@ -1,0 +1,14 @@
+package:
+  name: kivy
+  version: 2.0.0-dev
+
+source:
+  path: /src/kivy
+
+build:
+  script_env:
+    KIVY_SDL2_PATH: "{EM_CACHE}/asmjs/ports-builds/sdl2/include:{EM_CACHE}/asmjs/ports-builds/sdl2_mixer/dist/include/SDL2"
+
+test:
+  imports:
+    - kivy
