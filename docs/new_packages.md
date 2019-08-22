@@ -138,6 +138,20 @@ Shell commands to run after building the library. These are run inside of
 
 (This key is not in the Conda spec).
 
+#### `build/script_env`
+
+Environment variables to set before building the package. It can reference other existing environment variables using the typical python format syntax as in the example below.
+
+(This key is not in the Conda spec).
+
+E.g.
+
+```
+build:
+  script_env:
+    SDL2_PATH: "{EM_CACHE}/asmjs/ports-builds/sdl2/include"
+```
+
 ### `requirements`
 
 #### `requirements/run`

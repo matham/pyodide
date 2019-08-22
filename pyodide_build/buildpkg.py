@@ -108,6 +108,9 @@ def compile(path, srcpath, pkg, args):
     if pkg.get('build', {}).get('skip_host', True):
         env['SKIP_HOST'] = ''
 
+    for key, value in (pkg.get('build', {}).get('script_env', {}) or {}).items():
+        env[key] = value.format(**env)
+
     try:
         subprocess.run([
             str(Path(args.host) / 'bin' / 'python3'),
